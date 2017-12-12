@@ -1,9 +1,7 @@
 var VideoListView = Backbone.View.extend({
-   
 
   render: function() {
-    this.$el.empty();
-    // this.$el.children().detach(); 
+    this.$el.children().detach(); 
     // IY commment: .detach clears the container which we want to do 
     // in the beginning before rendering any more movies
     this.$el.html(this.template());
