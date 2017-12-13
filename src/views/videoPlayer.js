@@ -2,15 +2,17 @@ var VideoPlayerView = Backbone.View.extend({
   
   
   initialize: function() {
+    console.log('model: ', this.model);
     this.render();
+    
     this.collection.on('select', function(video) {
       this.model = video;
-      this.render();
+      this.render();               
     }, this);
   },
 
   render: function() {
-    console.log(this.model);
+
     this.$el.html(this.template(this.model.attributes));
     // console.log('id: ', this.model.attributes.id);
     return this;
@@ -25,4 +27,4 @@ var VideoPlayerView = Backbone.View.extend({
 //collections
 
 //use collection to listen for entry selection
-//videoPlayer uses listenTo listen to collection?
+//videoPlayer uses listenTo listen to collection? 

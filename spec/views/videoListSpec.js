@@ -18,11 +18,10 @@ describe('VideoListView', function() {
   });
 
   it('should render five `VideoListEntry` when given five videos', function() {
-    view.render(); // fake video data contains 5 entries
     expect(VideoListEntryView.prototype.render).to.have.callCount(5);
   });
 
-  xit('should re-render when video collection updates', function() {
+  it('should re-render when video collection updates', function() {
     collection.trigger('sync');
     expect(view.render).to.have.been.called;
   });

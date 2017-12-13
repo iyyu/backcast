@@ -7,7 +7,7 @@ var AppView = Backbone.View.extend({
   initialize: function() {
     this.render();
     // this.vidListView.on('select', function() {
-    //   console.log('hello');
+    //   console.log('hello'
     // });
     // this.listenTo(this.vidListView, 'select2', function() {
     //   console.log('hi!');
